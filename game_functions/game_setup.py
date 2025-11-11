@@ -76,17 +76,17 @@ if __name__ == "__main__":
     # print(result)  # Expected: {"p", "y", "t", "h", "o", "n"}
 
     ###Test 2.3###
-    result = initialize_letters_to_be_guessed("banana")
-    print(result)  # Expected: {"b", "a", "n"} (note: no duplicates)
-    
-    ##Test 2.4###
-    result = initialize_letters_to_be_guessed("Armageddon")
-    print(result)  # Expected: {"a", "r", "m", "g", "e", "d", "o", "n"}
-    
-    ##Test 2.5###
-    result = initialize_letters_to_be_guessed("Ice Cream")
-    print(result)  # Expected: {"i", "c", "e", "r", "a", "m"} (no spaces)
-    
+    # result = initialize_letters_to_be_guessed("banana")
+    # print(result)  # Expected: {"b", "a", "n"} (note: no duplicates)
+    #
+    # ##Test 2.4###
+    # result = initialize_letters_to_be_guessed("Armageddon")
+    # print(result)  # Expected: {"a", "r", "m", "g", "e", "d", "o", "n"}
+    #
+    # ##Test 2.5###
+    # result = initialize_letters_to_be_guessed("Ice Cream")
+    # print(result)  # Expected: {"i", "c", "e", "r", "a", "m"} (no spaces)
+    #
     
     ### --- Test Function 3: initialize_alphabet_display --- ###
 
