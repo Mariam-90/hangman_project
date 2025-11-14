@@ -17,8 +17,9 @@ def choose_random_word(word_list):
 # # Write a function that creates the initial display for a word.
 # # It should return a string with underscores separated by spaces (e.g., "_ _ _ _").
 # # The number of underscores should match the length of the word.
-# def initialize_secret_word_display(word):
-#     ...
+def initialize_secret_word_display(word):
+    underscores = ["_"] * len(word)
+    return " ".join(underscores)
 
 
 # --- FUNCTION 2 ---
@@ -46,6 +47,10 @@ def initialize_alphabet_display(alphabet: str):
 
 # Test your functions here!
 if __name__ == "__main__":
+    test_words = "onlyword"
+    result = initialize_secret_word_display(test_words)
+    print(result)  # Expected: "_ _ _ _ _ _ _ _"
+    print(initialize_secret_word_display("dog"))
 
     ### --- Test Function 1: choose_random_word --- ###
     
