@@ -32,7 +32,7 @@ def get_hidden_word_with_visible_guessed_letters(word, guessed_letters):
 # It should modify the set in place (set.add("a")).
 
 def update_guessed_letters(letter: str, guessed_letters: set):
-    ...
+    guessed_letters.add(letter)
 
 
 # --- FUNCTION 4 ---
@@ -92,25 +92,25 @@ if __name__ == "__main__":
     ### --- Test Function 2: get_hidden_word_with_visible_guessed_letters --- ###
     
     ###Test 2.1###
-    result = get_hidden_word_with_visible_guessed_letters("cat", {"c"})
-    print(result)  # Expected: "c _ _"
-    
-    ##Test 2.2###
-    result = get_hidden_word_with_visible_guessed_letters("banana", {"a", "n"})
-    print(result)  # Expected: "_ a n a n a"
-    
-    ##Test 2.3###
-    result = get_hidden_word_with_visible_guessed_letters("hello", {"e", "l"})
-    print(result)  # Expected: "_ e l l _"
-    
-    ##Test 2.4###
-    result = get_hidden_word_with_visible_guessed_letters("python", {"y", "o"})
-    print(result)  # Expected: "_ y _ _ o _"
-    
-    ##Test 2.5###
-    result = get_hidden_word_with_visible_guessed_letters("word", set())
-    print(result)  # Expected: "_ _ _ _"
-    
+    # result = get_hidden_word_with_visible_guessed_letters("cat", {"c"})
+    # print(result)  # Expected: "c _ _"
+    #
+    # ##Test 2.2###
+    # result = get_hidden_word_with_visible_guessed_letters("banana", {"a", "n"})
+    # print(result)  # Expected: "_ a n a n a"
+    #
+    # ##Test 2.3###
+    # result = get_hidden_word_with_visible_guessed_letters("hello", {"e", "l"})
+    # print(result)  # Expected: "_ e l l _"
+    #
+    # ##Test 2.4###
+    # result = get_hidden_word_with_visible_guessed_letters("python", {"y", "o"})
+    # print(result)  # Expected: "_ y _ _ o _"
+    #
+    # ##Test 2.5###
+    # result = get_hidden_word_with_visible_guessed_letters("word", set())
+    # print(result)  # Expected: "_ _ _ _"
+    #
     
     ### --- Test Function 3: update_guessed_letters --- ###
     
@@ -118,17 +118,17 @@ if __name__ == "__main__":
     # letters = {"a", "b"}
     # update_guessed_letters("c", letters)
     # print(letters)  # Expected: {"a", "b", "c"}
-    
-    ###Test 3.2###
+    #
+    # ##Test 3.2###
     # letters = set()
     # update_guessed_letters("x", letters)
     # print(letters)  # Expected: {"x"}
-    
-    ###Test 3.3###
+    #
+    # ##Test 3.3###
     # letters = {"a", "b", "c"}
     # update_guessed_letters("d", letters)
     # print(letters)  # Expected: {"a", "b", "c", "d"}
-    
+    #
     
     ### --- Test Function 4: count_letter_occurrences --- ###
     
