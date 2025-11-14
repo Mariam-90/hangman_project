@@ -47,10 +47,10 @@ def initialize_alphabet_display(alphabet: str):
 
 # Test your functions here!
 if __name__ == "__main__":
-    test_words = "onlyword"
-    result = initialize_secret_word_display(test_words)
-    print(result)  # Expected: "_ _ _ _ _ _ _ _"
-    print(initialize_secret_word_display("dog"))
+    # test_words = "onlyword"
+    # result = initialize_secret_word_display(test_words)
+    # print(result)  # Expected: "_ _ _ _ _ _ _ _"
+    # print(initialize_secret_word_display("dog"))
 
     ### --- Test Function 1: choose_random_word --- ###
     
