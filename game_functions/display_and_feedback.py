@@ -9,7 +9,7 @@
 from common.ascii_art import hangman_7_stages
 
 def show_hangman(incorrect_guesses, hangman_art: list[str]=hangman_7_stages):
-    ...
+    return hangman_art[incorrect_guesses]
 
 
 # --- FUNCTION 2 ---
@@ -50,19 +50,19 @@ if __name__ == "__main__":
     ### --- Test Function 1: show_hangman --- ###
     
     ###Test 1.1 - No incorrect guesses (empty gallows)###
-    # print(show_hangman(0))
+     print(show_hangman(0))
     # Expected: empty gallows (stage 0)
-    
-    ###Test 1.2 - Three incorrect guesses###
-    # print(show_hangman(3))
+    #
+    # ##Test 1.2 - Three incorrect guesses###
+     print(show_hangman(3))
     # Expected: head, body, one arm (stage 3)
-    
-    ###Test 1.3 - Six incorrect guesses (full hangman)###
-    # print(show_hangman(6))
+    #
+    # ##Test 1.3 - Six incorrect guesses (full hangman)###
+     print(show_hangman(6))
     # Expected: complete hangman (stage 6)
-    
-    ###Test 1.4 - One incorrect guess###
-    # print(show_hangman(1))
+    #
+    # ##Test 1.4 - One incorrect guess###
+     print(show_hangman(1))
     # Expected: head only (stage 1)
     
     
@@ -106,4 +106,3 @@ if __name__ == "__main__":
     ###Test 4.2###
     # show_lose_message("secret")
 
-    pass
