@@ -7,8 +7,7 @@
 # Return True if the letter is in the word, False otherwise.
 
 def check_letter_in_word(letter, word):
-    ...
-
+    return letter in word
 
 # --- FUNCTION 2 ---
 # Write a function that gets a word and a set of guessed_letters.
@@ -67,21 +66,21 @@ if __name__ == "__main__":
     
     ### --- Test Function 1: check_letter_in_word --- ###
     
-    ###Test 1.1###
-    # result = check_letter_in_word("p", "python")
-    # print(result)  # Expected: True
+    ##Test 1.1###
+    result = check_letter_in_word("p", "python")
+    print(result)  # Expected: True
     
-    ###Test 1.2###
-    # result = check_letter_in_word("x", "python")
-    # print(result)  # Expected: False
+    ##Test 1.2###
+    result = check_letter_in_word("x", "python")
+    print(result)  # Expected: False
     
-    ###Test 1.3###
-    # result = check_letter_in_word("a", "banana")
-    # print(result)  # Expected: True
+    ##Test 1.3###
+    result = check_letter_in_word("a", "banana")
+    print(result)  # Expected: True
     
-    ###Test 1.4###
-    # result = check_letter_in_word("n", "banana")
-    # print(result)  # Expected: True
+    ##Test 1.4###
+    result = check_letter_in_word("n", "banana")
+    print(result)  # Expected: True
     
     
     ### --- Test Function 2: get_hidden_word_with_visible_guessed_letters --- ###
