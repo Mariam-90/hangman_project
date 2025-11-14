@@ -46,8 +46,8 @@ def show_win_message(word):
 # Example: "Game Over! The word was: python"
 
 def show_lose_message(word):
-    ...
-
+    if game_state.check_lose_condition(word):
+        print(f"Game Over! The word was:{word}")
 
 # Test your functions here!
 if __name__ == "__main__":
