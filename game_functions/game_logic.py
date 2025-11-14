@@ -75,8 +75,7 @@ def alphabet_display_with_guessed_letters_marked(letters_alphabet, guessed_lette
 # (The function will not return anything!)
 
 def update_letters_to_be_guessed(hidden_letters, letter):
-    ...
-
+    hidden_letters.discard(letter)
 
 # Test your functions here!
 if __name__ == "__main__":
@@ -163,19 +162,19 @@ if __name__ == "__main__":
     ### --- Test Function 5: alphabet_display_with_guessed_letters_marked --- ###
     
     ###Test 5.1###
-    letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    result = alphabet_display_with_guessed_letters_marked(letters_alphabet, {"a", "e", "t"})
-    print(result)  # Expected: "a̶ b c d e̶ f g h i j k l m n o p q r s t̶ u v w x y z"
-    
-    ##Test 5.2###
-    letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    result = alphabet_display_with_guessed_letters_marked(letters_alphabet, set())
-    print(result)  # Expected: "a b c d e f g h i j k l m n o p q r s t u v w x y z"
-    
-    ##Test 5.3###
-    letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    result = alphabet_display_with_guessed_letters_marked(letters_alphabet, {"z", "a"})
-    print(result)  # Expected: "a̶ b c d e f g h i j k l m n o p q r s t u v w x y z̶"
+    # letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    # result = alphabet_display_with_guessed_letters_marked(letters_alphabet, {"a", "e", "t"})
+    # print(result)  # Expected: "a̶ b c d e̶ f g h i j k l m n o p q r s t̶ u v w x y z"
+    #
+    # ##Test 5.2###
+    # letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    # result = alphabet_display_with_guessed_letters_marked(letters_alphabet, set())
+    # print(result)  # Expected: "a b c d e f g h i j k l m n o p q r s t u v w x y z"
+    #
+    # ##Test 5.3###
+    # letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    # result = alphabet_display_with_guessed_letters_marked(letters_alphabet, {"z", "a"})
+    # print(result)  # Expected: "a̶ b c d e f g h i j k l m n o p q r s t u v w x y z̶"
     
     
     ### --- Test Function 6: update_letters_to_be_guessed --- ###
@@ -184,13 +183,13 @@ if __name__ == "__main__":
     # hidden_letters = {"p", "y", "t", "h", "o", "n"}
     # update_letters_to_be_guessed(hidden_letters, "p")
     # print(hidden_letters)  # Expected: {"y", "t", "h", "o", "n"}
-    
-    ###Test 6.2###
+    #
+    # ##Test 6.2###
     # hidden_letters = {"a", "b", "c"}
     # update_letters_to_be_guessed(hidden_letters, "b")
     # print(hidden_letters)  # Expected: {"a", "c"}
-    
-    ###Test 6.3###
+    #
+    # ##Test 6.3###
     # hidden_letters = {"x"}
     # update_letters_to_be_guessed(hidden_letters, "x")
     # print(hidden_letters)  # Expected: set() (empty set)
