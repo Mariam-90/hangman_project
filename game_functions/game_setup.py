@@ -8,13 +8,9 @@ import random
 # The function receives a list of words and returns one random word.
 
 def choose_random_word(word_list):
-    # OP1
-    # random.choice(...)
-
-    # OP2
-    # random.randrange()
-    ...
-
+    index = random.randrange(len(word_list))
+    word = word_list[index]
+    return word
 
 # WILL CREATE DISPLAY OF WORD IN RUNTIME
 # # --- FUNCTION 2 ---
@@ -57,17 +53,17 @@ if __name__ == "__main__":
     # test_words = ["python", "hangman", "programming"]
     # result = choose_random_word(test_words)
     # print(result in test_words)  # Expected: True
-    
-    ###Test 1.2###
+    #
+    # ##Test 1.2###
     # test_words = ["apple", "banana", "cherry", "date"]
     # result = choose_random_word(test_words)
     # print(result in test_words)  # Expected: True
-    
-    ###Test 1.3 - Single word list###
+    #
+    # ##Test 1.3 - Single word list###
     # test_words = ["onlyword"]
     # result = choose_random_word(test_words)
     # print(result)  # Expected: "onlyword"
-    
+    #
     
     ### --- Test Function 2: initialize_letters_to_be_guessed --- ###
     
