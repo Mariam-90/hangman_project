@@ -1,7 +1,6 @@
 # ========================================
 # HANGMAN GAME - DISPLAY & FEEDBACK
-# ========================================
-
+import game_logic
 # --- FUNCTION 1 ---
 # Write a function that returns the hangman ASCII art based on incorrect guesses.
 # Use the stages from the "ascii_art.py" file.
@@ -25,7 +24,11 @@ def show_hangman(incorrect_guesses, hangman_art: list[str]=hangman_7_stages):
 #   from game_logic.py to work properly
 
 def display_game_status(letters_alphabet, guessed_letters, hidden_word, attempts_remain):
-    ...
+    word = game_logic.get_hidden_word_with_visible_guessed_letters(hidden_word,guessed_letters)
+    print(f"Word: {word}")
+    letters = game_logic.alphabet_display_with_guessed_letters_marked(letters_alphabet,guessed_letters)
+    print(f"Letters: {letters}")
+    print(f"Attempts remaining: {attempts_remain}")
 
 
 # --- FUNCTION 3 ---
@@ -48,24 +51,24 @@ def show_lose_message(word):
 if __name__ == "__main__":
     
     ### --- Test Function 1: show_hangman --- ###
-    
+
     ###Test 1.1 - No incorrect guesses (empty gallows)###
-     print(show_hangman(0))
+     #print(show_hangman(0))
     # Expected: empty gallows (stage 0)
     #
     # ##Test 1.2 - Three incorrect guesses###
-     print(show_hangman(3))
+     #print(show_hangman(3))
     # Expected: head, body, one arm (stage 3)
     #
     # ##Test 1.3 - Six incorrect guesses (full hangman)###
-     print(show_hangman(6))
+     #print(show_hangman(6))
     # Expected: complete hangman (stage 6)
     #
     # ##Test 1.4 - One incorrect guess###
-     print(show_hangman(1))
+    print(show_hangman(1))
     # Expected: head only (stage 1)
-    
-    
+
+
     ### --- Test Function 2: display_game_status --- ###
     
     ###Test 2.1 - Mid-game status###
@@ -77,7 +80,7 @@ if __name__ == "__main__":
     # Word: _ _ t
     # Letters: a̶ b c d e̶ f g h i̶ j k l m n o p q r s t̶ u v w x y z
     # Attempts remaining: 5
-    
+
     ###Test 2.2 - Starting game###
     # letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     # guessed_letters = set()
