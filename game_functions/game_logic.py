@@ -18,7 +18,13 @@ def check_letter_in_word(letter, word):
 # the function should return "_ y _ _ o _".
 
 def get_hidden_word_with_visible_guessed_letters(word, guessed_letters):
-    ...
+    visible_guessed = list()
+    for letter in word:
+      if check_letter_in_word(letter,"".join(guessed_letters) ):
+          visible_guessed.append(letter)
+      else:
+          visible_guessed.append("_")
+    return " ".join(visible_guessed)
 
 
 # --- FUNCTION 3 ---
@@ -67,43 +73,43 @@ if __name__ == "__main__":
     ### --- Test Function 1: check_letter_in_word --- ###
     
     ##Test 1.1###
-    result = check_letter_in_word("p", "python")
-    print(result)  # Expected: True
-    
-    ##Test 1.2###
-    result = check_letter_in_word("x", "python")
-    print(result)  # Expected: False
-    
-    ##Test 1.3###
-    result = check_letter_in_word("a", "banana")
-    print(result)  # Expected: True
-    
-    ##Test 1.4###
-    result = check_letter_in_word("n", "banana")
-    print(result)  # Expected: True
+    # result = check_letter_in_word("p", "python")
+    # print(result)  # Expected: True
+    #
+    # ##Test 1.2###
+    # result = check_letter_in_word("x", "python")
+    # print(result)  # Expected: False
+    #
+    # ##Test 1.3###
+    # result = check_letter_in_word("a", "banana")
+    # print(result)  # Expected: True
+    #
+    # ##Test 1.4###
+    # result = check_letter_in_word("n", "banana")
+    # print(result)  # Expected: True
     
     
     ### --- Test Function 2: get_hidden_word_with_visible_guessed_letters --- ###
     
     ###Test 2.1###
-    # result = get_hidden_word_with_visible_guessed_letters("cat", {"c"})
-    # print(result)  # Expected: "c _ _"
+    result = get_hidden_word_with_visible_guessed_letters("cat", {"c"})
+    print(result)  # Expected: "c _ _"
     
-    ###Test 2.2###
-    # result = get_hidden_word_with_visible_guessed_letters("banana", {"a", "n"})
-    # print(result)  # Expected: "_ a n a n a"
+    ##Test 2.2###
+    result = get_hidden_word_with_visible_guessed_letters("banana", {"a", "n"})
+    print(result)  # Expected: "_ a n a n a"
     
-    ###Test 2.3###
-    # result = get_hidden_word_with_visible_guessed_letters("hello", {"e", "l"})
-    # print(result)  # Expected: "_ e l l _"
+    ##Test 2.3###
+    result = get_hidden_word_with_visible_guessed_letters("hello", {"e", "l"})
+    print(result)  # Expected: "_ e l l _"
     
-    ###Test 2.4###
-    # result = get_hidden_word_with_visible_guessed_letters("python", {"y", "o"})
-    # print(result)  # Expected: "_ y _ _ o _"
+    ##Test 2.4###
+    result = get_hidden_word_with_visible_guessed_letters("python", {"y", "o"})
+    print(result)  # Expected: "_ y _ _ o _"
     
-    ###Test 2.5###
-    # result = get_hidden_word_with_visible_guessed_letters("word", set())
-    # print(result)  # Expected: "_ _ _ _"
+    ##Test 2.5###
+    result = get_hidden_word_with_visible_guessed_letters("word", set())
+    print(result)  # Expected: "_ _ _ _"
     
     
     ### --- Test Function 3: update_guessed_letters --- ###
