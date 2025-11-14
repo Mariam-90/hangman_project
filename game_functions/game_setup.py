@@ -38,15 +38,19 @@ def initialize_letters_to_be_guessed(word):
         if letter.isalpha():
             unique_letters.add(letter.lower())
     return unique_letters
+
 # --- FUNCTION 3 ---
 # Write a function that returns the alphabet as a list/tuple.
 # So if the input is "abcde", the function will return ["a", "b", "c", "d", "e"]
 def initialize_alphabet_display(alphabet: str):
-    ...
+    if not isinstance(alphabet, str):
+        raise ValueError("alphabet must be a string")
+    return tuple(alphabet)
+
 
 # Test your functions here!
 if __name__ == "__main__":
-    
+
     ### --- Test Function 1: choose_random_word --- ###
     
     ###Test 1.1###
@@ -109,7 +113,7 @@ if __name__ == "__main__":
     # alphabet = "abc"
     # result = initialize_alphabet_display(alphabet)
     # print(type(result))  # Expected: <class 'list'> or <class 'tuple'>
-    
+
     pass
 
 
