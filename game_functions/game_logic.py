@@ -40,7 +40,11 @@ def update_guessed_letters(letter: str, guessed_letters: set):
 # Return the count.
 
 def count_letter_occurrences(letter, word):
-    ...
+    count = 0
+    for ch in word:
+        if ch == letter:
+            count += 1
+    return count
 
 
 # --- FUNCTION 5 ---
@@ -135,20 +139,20 @@ if __name__ == "__main__":
     ###Test 4.1###
     # result = count_letter_occurrences("a", "banana")
     # print(result)  # Expected: 3
-    
-    ###Test 4.2###
+    #
+    # ##Test 4.2###
     # result = count_letter_occurrences("l", "hello")
     # print(result)  # Expected: 2
-    
-    ###Test 4.3###
+    #
+    # ##Test 4.3###
     # result = count_letter_occurrences("x", "python")
     # print(result)  # Expected: 0
-    
-    ###Test 4.4###
+    #
+    # ##Test 4.4###
     # result = count_letter_occurrences("o", "programming")
     # print(result)  # Expected: 1
-    
-    
+
+
     ### --- Test Function 5: alphabet_display_with_guessed_letters_marked --- ###
     
     ###Test 5.1###
