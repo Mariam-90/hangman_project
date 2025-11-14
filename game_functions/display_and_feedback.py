@@ -1,6 +1,6 @@
 # ========================================
 # HANGMAN GAME - DISPLAY & FEEDBACK
-import game_logic
+import game_logic, game_state
 # --- FUNCTION 1 ---
 # Write a function that returns the hangman ASCII art based on incorrect guesses.
 # Use the stages from the "ascii_art.py" file.
@@ -36,7 +36,9 @@ def display_game_status(letters_alphabet, guessed_letters, hidden_word, attempts
 # Example: "Congratulations! You guessed the word: python"
 
 def show_win_message(word):
-    ...
+    if game_state.check_win_condition(word):
+        print(f"Congratulations! You guessed the word: {word}")
+
 
 
 # --- FUNCTION 4 ---
