@@ -30,8 +30,9 @@ def check_lose_condition(attempts_remaining):
 # Return True if game is over, False otherwise.
 
 def is_game_over(hidden_letters, attempts_remaining):
-    ...
-
+    if check_lose_condition(attempts_remaining)  or check_win_condition(hidden_letters):
+        return  True
+    return False
 
 # Test your functions here!
 if __name__ == "__main__":
@@ -53,20 +54,20 @@ if __name__ == "__main__":
     ### --- Test Function 2: check_lose_condition --- ###
     
     ###Test 2.1 - Zero attempts remaining (lost)###
-    result = check_lose_condition(0)
-    print(result)  # Expected: True
-
-    ##Test 2.2 - Some attempts remaining###
-    result = check_lose_condition(3)
-    print(result)  # Expected: False
-
-    ##Test 2.3 - One attempt remaining###
-    result = check_lose_condition(1)
-    print(result)  # Expected: False
-
-    ##Test 2.4 - Many attempts remaining###
-    result = check_lose_condition(6)
-    print(result)  # Expected: False
+    # result = check_lose_condition(0)
+    # print(result)  # Expected: True
+    #
+    # ##Test 2.2 - Some attempts remaining###
+    # result = check_lose_condition(3)
+    # print(result)  # Expected: False
+    #
+    # ##Test 2.3 - One attempt remaining###
+    # result = check_lose_condition(1)
+    # print(result)  # Expected: False
+    #
+    # ##Test 2.4 - Many attempts remaining###
+    # result = check_lose_condition(6)
+    # print(result)  # Expected: False
 
     
     ### --- Test Function 3: is_game_over --- ###
@@ -74,20 +75,20 @@ if __name__ == "__main__":
     ###Test 3.1 - Game won (no hidden letters remaining)###
     # result = is_game_over(set(), 3)
     # print(result)  # Expected: True (won)
-    
-    ###Test 3.2 - Game lost (no attempts remaining)###
+    #
+    # ##Test 3.2 - Game lost (no attempts remaining)###
     # result = is_game_over({"c", "a", "t"}, 0)
     # print(result)  # Expected: True (lost)
-    
-    ###Test 3.3 - Game still in progress###
+    #
+    # ##Test 3.3 - Game still in progress###
     # result = is_game_over({"a", "t"}, 4)
     # print(result)  # Expected: False (still playing)
-    
-    ###Test 3.4 - Game won with attempts remaining###
+    #
+    # ##Test 3.4 - Game won with attempts remaining###
     # result = is_game_over(set(), 6)
     # print(result)  # Expected: True (won)
-    
-    ###Test 3.5 - Last attempt, letters still hidden###
+    #
+    # ##Test 3.5 - Last attempt, letters still hidden###
     # result = is_game_over({"x", "y"}, 1)
     # print(result)  # Expected: False (still playing)
     
