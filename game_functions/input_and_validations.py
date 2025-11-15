@@ -31,8 +31,9 @@ def is_valid_letter(input_letter):
 # Return True if the letter is in the set, False otherwise.
 
 def is_already_guessed(letter, guessed_letters):
-    ...
-
+    if letter in guessed_letters:
+        return True
+    return False
 
 # --- FUNCTION 4 ---
 # Write a function that keeps asking for input until a valid, new letter is entered. (looping until all conditions are met)
