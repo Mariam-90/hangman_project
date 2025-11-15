@@ -7,7 +7,7 @@
 # The function will return the user's input (as lowercase).
 
 def get_letter_from_user():
-    letter = input("Please enter a letter: ")
+    letter = input()
     return letter.lower()
 
 
@@ -19,7 +19,10 @@ def get_letter_from_user():
 # (you can use .isalpha())
 
 def is_valid_letter(input_letter):
-    ...
+    if len(input_letter) == 1 and input_letter.isalpha() :
+        return True
+    return False
+
 
 
 # --- FUNCTION 3 ---
