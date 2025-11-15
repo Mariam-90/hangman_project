@@ -79,7 +79,6 @@ def update_letters_to_be_guessed(hidden_letters, letter):
 
 # Test your functions here!
 if __name__ == "__main__":
-    
     ### --- Test Function 1: check_letter_in_word --- ###
     
     ##Test 1.1###
@@ -97,7 +96,6 @@ if __name__ == "__main__":
     # ##Test 1.4###
     # result = check_letter_in_word("n", "banana")
     # print(result)  # Expected: True
-    
     
     ### --- Test Function 2: get_hidden_word_with_visible_guessed_letters --- ###
     
@@ -158,7 +156,6 @@ if __name__ == "__main__":
     # result = count_letter_occurrences("o", "programming")
     # print(result)  # Expected: 1
 
-
     ### --- Test Function 5: alphabet_display_with_guessed_letters_marked --- ###
     
     ###Test 5.1###
@@ -175,7 +172,6 @@ if __name__ == "__main__":
     # letters_alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     # result = alphabet_display_with_guessed_letters_marked(letters_alphabet, {"z", "a"})
     # print(result)  # Expected: "a̶ b c d e f g h i j k l m n o p q r s t u v w x y z̶"
-    
     
     ### --- Test Function 6: update_letters_to_be_guessed --- ###
     
