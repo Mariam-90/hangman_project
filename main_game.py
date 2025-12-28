@@ -1,6 +1,3 @@
-import random
-
-from google.api_core.retry import retry_target_stream
 
 from game_functions.display_and_feedback import display_game_status, show_hangman, show_win_message, show_lose_message
 from game_functions.game_logic import update_guessed_letters, update_letters_to_be_guessed, check_letter_in_word
@@ -22,6 +19,7 @@ list_of_words = [
     "tomato"
 ]
 letters_alphabet = initialize_alphabet_display("abcdefghijklmnopqrstuvwxyz")
+
 secret_word = choose_random_word(list_of_words)
 hidden_letters = initialize_letters_to_be_guessed(secret_word)
 guessed_letters = set()
